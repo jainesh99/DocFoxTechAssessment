@@ -84,7 +84,7 @@ public class Rover {
 
     private void printAction(String action)
     {
-        System.out.println(action + ":" + x_coordinate + " " + y_coordinate + " " + direction);
+        System.out.println(action + ": (" + x_coordinate + "," + y_coordinate + ") " + direction);
     }
 
 }
