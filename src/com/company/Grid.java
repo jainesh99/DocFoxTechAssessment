@@ -20,7 +20,7 @@ public class Grid {
     {
         int new_pos = x*y;
 
-        if(new_pos <= max_size)
+        if(new_pos <= max_size && new_pos > 0)
         {
             return true;
         }
@@ -29,4 +29,28 @@ public class Grid {
         }
     }
 
+
+    public int getGrid_x() {
+        return grid_x;
+    }
+
+    public void setGrid_x(int grid_x) {
+        this.grid_x = grid_x;
+    }
+
+    public int getGrid_y() {
+        return grid_y;
+    }
+
+    public void setGrid_y(int grid_y) {
+        this.grid_y = grid_y;
+    }
+
+    public int getMax_size() {
+        return max_size;
+    }
+
+    public void setMax_size(int max_size) {
+        this.max_size = max_size;
+    }
 }

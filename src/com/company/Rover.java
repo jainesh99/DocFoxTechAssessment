@@ -63,9 +63,10 @@ public class Rover {
 
         }
         else
-        {
-            index--;
-        }
+            if(rotation.equals("L"))
+            {
+                index--;
+            }
 
         if(index > (compass.length-1))
         {
@@ -87,4 +88,45 @@ public class Rover {
         System.out.println(action + ": (" + x_coordinate + "," + y_coordinate + ") " + direction);
     }
 
+    public int getX_coordinate() {
+        return x_coordinate;
+    }
+
+    public void setX_coordinate(int x_coordinate) {
+        this.x_coordinate = x_coordinate;
+    }
+
+    public int getY_coordinate() {
+        return y_coordinate;
+    }
+
+    public void setY_coordinate(int y_coordinate) {
+        this.y_coordinate = y_coordinate;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
+    }
+
+    public void doActions(String actions, Grid g)
+    {
+        for(int i = 0; i < actions.length();i++)
+        {
+            char temp = actions.charAt(i);
+
+            if(temp == 'M')
+            {
+                move(g);
+            }
+            else
+            if(temp == 'R' || temp == 'L')
+            {
+                rotate(temp + "");
+            }
+        }
+    }
 }

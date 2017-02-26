@@ -18,21 +18,7 @@ public class Main {
         Grid g = d.getGrid();
         String actions = d.getActions();
 
-        for(int i = 0; i < actions.length();i++)
-        {
-            char temp = actions.charAt(i);
-
-            if(temp == 'M')
-            {
-                r.move(g);
-            }
-            else
-                if(temp == 'R' || temp == 'L')
-                {
-                    r.rotate(temp + "");
-                }
-        }
-
+        r.doActions(actions,g);
 
     }
 
